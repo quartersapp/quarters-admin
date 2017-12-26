@@ -3,7 +3,6 @@ import {
   List,
   Datagrid,
   EditButton,
-  EmailField,
   TextField,
   Edit,
   SimpleForm,
@@ -20,7 +19,7 @@ export const ArtistList = (props) => (
   <List {...props}>
     <Datagrid>
       <TextField source='id' />
-      <EmailField source='name' />
+      <TextField source='name' />
       <ReferenceField
         label='city'
         source='cityId'
