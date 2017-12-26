@@ -11,6 +11,9 @@ import {
   Create
 } from 'admin-on-rest'
 
+import GenreIcon from 'material-ui/svg-icons/action/label'
+export { GenreIcon }
+
 export const GenreList = (props) => (
   <List {...props}>
     <Datagrid>

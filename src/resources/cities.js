@@ -11,6 +11,9 @@ import {
   Create
 } from 'admin-on-rest'
 
+import CitiesIcon from 'material-ui/svg-icons/communication/location-on'
+export { CitiesIcon }
+
 export const CityList = (props) => (
   <List {...props}>
     <Datagrid>

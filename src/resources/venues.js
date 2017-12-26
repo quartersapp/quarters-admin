@@ -14,6 +14,9 @@ import {
   ReferenceField
 } from 'admin-on-rest'
 
+import VenueIcon from 'material-ui/svg-icons/social/location-city'
+export { VenueIcon }
+
 export const VenueList = (props) => (
   <List {...props}>
     <Datagrid>

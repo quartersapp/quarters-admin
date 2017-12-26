@@ -12,6 +12,9 @@ import {
   Create
 } from 'admin-on-rest'
 
+import UserIcon from 'material-ui/svg-icons/social/person'
+export { UserIcon }
+
 export const UserList = (props) => (
   <List {...props}>
     <Datagrid>

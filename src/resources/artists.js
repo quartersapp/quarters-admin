@@ -15,6 +15,9 @@ import {
   LongTextInput
 } from 'admin-on-rest'
 
+import ArtistIcon from 'material-ui/svg-icons/action/stars'
+export { ArtistIcon }
+
 export const ArtistList = (props) => (
   <List {...props}>
     <Datagrid>
