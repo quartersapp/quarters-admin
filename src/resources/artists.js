@@ -12,7 +12,8 @@ import {
   ReferenceInput,
   AutocompleteInput,
   ReferenceField,
-  LongTextInput
+  LongTextInput,
+  required
 } from 'admin-on-rest'
 
 import ArtistIcon from 'material-ui/svg-icons/action/stars'
@@ -38,12 +39,13 @@ export const ArtistEdit = (props) => (
   <Edit title='Artist' {...props}>
     <SimpleForm>
       <DisabledInput source='id' />
-      <TextInput source='name' />
+      <TextInput source='name' validate={required} />
       <ReferenceInput
         allowEmpty
         label='city'
         source='cityId'
-        reference='cities'>
+        reference='cities'
+        validate={required}>
         <AutocompleteInput optionText='name' />
       </ReferenceInput>
       <LongTextInput source='bio' />
@@ -54,12 +56,13 @@ export const ArtistEdit = (props) => (
 export const ArtistCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source='name' />
+      <TextInput source='name' validate={required} />
       <ReferenceInput
         allowEmpty
         label='city'
         source='cityId'
-        reference='cities'>
+        reference='cities'
+        validate={required}>
         <AutocompleteInput optionText='name' />
       </ReferenceInput>
       <LongTextInput source='bio' />

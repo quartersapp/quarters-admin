@@ -11,7 +11,8 @@ import {
   Create,
   ReferenceInput,
   AutocompleteInput,
-  ReferenceField
+  ReferenceField,
+  required
 } from 'admin-on-rest'
 
 import VenueIcon from 'material-ui/svg-icons/social/location-city'
@@ -37,13 +38,14 @@ export const VenueEdit = (props) => (
   <Edit title='Venue' {...props}>
     <SimpleForm>
       <DisabledInput source='id' />
-      <TextInput source='name' />
-      <TextInput source='googlePlaceId' />
+      <TextInput source='name' validate={required} />
+      <TextInput source='googlePlaceId' validate={required} />
       <ReferenceInput
         allowEmpty
         label='city'
         source='cityId'
-        reference='cities'>
+        reference='cities'
+        validate={required}>
         <AutocompleteInput optionText='name' />
       </ReferenceInput>
     </SimpleForm>
@@ -53,13 +55,14 @@ export const VenueEdit = (props) => (
 export const VenueCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source='name' />
-      <TextInput source='googlePlaceId' />
+      <TextInput source='name' validate={required} />
+      <TextInput source='googlePlaceId' validate={required} />
       <ReferenceInput
         allowEmpty
         label='city'
         source='cityId'
-        reference='cities'>
+        reference='cities'
+        validate={required}>
         <AutocompleteInput optionText='name' />
       </ReferenceInput>
     </SimpleForm>

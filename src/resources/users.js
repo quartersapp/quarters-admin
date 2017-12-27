@@ -10,7 +10,8 @@ import {
   DisabledInput,
   TextInput,
   Create,
-  CheckboxGroupInput
+  CheckboxGroupInput,
+  required
 } from 'admin-on-rest'
 
 import UserIcon from 'material-ui/svg-icons/social/person'
@@ -36,7 +37,7 @@ export const UserEdit = (props) => (
   <Edit title='User' {...props}>
     <SimpleForm>
       <DisabledInput source='id' />
-      <TextInput source='email' />
+      <TextInput source='email' validate={required} />
       <TextInput source='password' type='password' />
       <CheckboxGroupInput source='roles' choices={ROLES} />
       <TextInput source='firstName' />
@@ -48,7 +49,7 @@ export const UserEdit = (props) => (
 export const UserCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source='email' />
+      <TextInput source='email' validate={required} />
       <TextInput source='password' type='password' />
       <CheckboxGroupInput source='roles' choices={ROLES} />
       <TextInput source='firstName' />

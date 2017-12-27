@@ -8,7 +8,8 @@ import {
   SimpleForm,
   DisabledInput,
   TextInput,
-  Create
+  Create,
+  required
 } from 'admin-on-rest'
 
 import GenreIcon from 'material-ui/svg-icons/action/label'
@@ -28,7 +29,7 @@ export const GenreEdit = (props) => (
   <Edit title='Genre' {...props}>
     <SimpleForm>
       <DisabledInput source='id' />
-      <TextInput source='name' />
+      <TextInput source='name' validate={required} />
     </SimpleForm>
   </Edit>
 )
@@ -36,7 +37,7 @@ export const GenreEdit = (props) => (
 export const GenreCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source='name' />
+      <TextInput source='name' validate={required} />
     </SimpleForm>
   </Create>
 )
