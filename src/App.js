@@ -21,6 +21,7 @@ const App = () => (
       list={ArtistList}
       edit={ArtistEdit}
       create={ArtistCreate}
+      remove={Delete}
     />
     <Resource
       name='cities'
@@ -28,6 +29,7 @@ const App = () => (
       list={CityList}
       edit={CityEdit}
       create={CityCreate}
+      remove={Delete}
     />
     <Resource
       name='genres'
@@ -43,6 +45,7 @@ const App = () => (
       list={UserList}
       edit={UserEdit}
       create={UserCreate}
+      remove={Delete}
     />
     <Resource
       name='venues'
@@ -50,6 +53,7 @@ const App = () => (
       list={VenueList}
       edit={VenueEdit}
       create={VenueCreate}
+      remove={Delete}
     />
   </Admin>
 )
